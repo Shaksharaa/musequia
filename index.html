@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <i>Muséquia</i> | Discover Your Favourites</title>
+    <title> Muséquia | Discover Your Favourites</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -42,14 +42,31 @@
             <p class="tagline">EXPLORE OUR WORLD</p>
             <h2>Browse categories</h2>
 
-            <div class="category-grid">
-                <div class="category">✧ Beauty & Skincare</div>
-                <div class="category">✧ Fashion</div>
-                <div class="category">✧ Tech & Gadgets</div>
-                <div class="category">✧ Home & Living</div>
-                <div class="category">✧ Books & Stationery</div>
-                <div class="category">✧ Everyday Finds</div>
-            </div>
+           ```html
+<section class="categories" id="categories">
+    <p class="tagline">EXPLORE OUR WORLD</p>
+    <h2>Browse categories</h2>
+
+    <input
+        type="search"
+        id="searchBar"
+        placeholder="Search your favourites..."
+        aria-label="Search products"
+    >
+
+    <div class="category-grid">
+        <button class="category" data-category="beauty">✧ Beauty & Skincare</button>
+        <button class="category" data-category="fashion">✧ Fashion</button>
+        <button class="category" data-category="tech">✧ Tech & Gadgets</button>
+        <button class="category" data-category="home">✧ Home & Living</button>
+        <button class="category" data-category="books">✧ Books & Stationery</button>
+        <button class="category" data-category="everyday">✧ Everyday Finds</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <p id="emptyMessage" hidden>No matching products found.</p>
+
         </section>
 
         <section class="about" id="about">
