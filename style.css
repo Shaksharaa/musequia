@@ -1,0 +1,166 @@
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #faf7f8;
+    color: #242124;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #ffffff;
+}
+
+.logo {
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d58bad;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background: #f1e8ed;
+}
+
+.tagline {
+    color: #b67596;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 85px);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #c17d9f;
+}
+
+.intro {
+    max-width: 450px;
+    margin: 25px auto;
+    line-height: 1.8;
+    color: #686168;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 25px;
+    background: #242124;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #c17d9f;
+    transform: translateY(-3px);
+}
+
+/* CATEGORIES */
+
+.categories {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    padding: 40px 15px;
+    border: 1px solid #eee5ea;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.category:hover {
+    background: #f1e8ed;
+    transform: translateY(-5px);
+}
+
+/* ABOUT */
+
+.about {
+    background: #242124;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.about p {
+    max-width: 500px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    color: #d7cbd2;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: white;
+    color: #777;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
